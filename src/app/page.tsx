@@ -1,101 +1,79 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="bg-[#252B42] min-h-screen flex items-center justify-center">
+      <div className="w-[1046px] h-auto p-20 flex flex-col gap-6">
+        <header className="text-left">
+          <h5 className="text-[#23A6F0] font-montserrat text-lg font-bold tracking-wide mb-4 flex items-center justify-center">
+            Welcome
+          </h5>
+          <h1 className="text-white font-montserrat text-5xl font-bold leading-tight tracking-wide text-center mb-2">
+            Selling on the
+            <br /> internet like a pro
+          </h1>
+        </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="flex flex-col items-center">
+          <h4 className="text-white font-montserrat text-2xl leading-relaxed tracking-wide font-normal text-center mt-1 mb-6">
+            We know how large objects will act, but things on a
+            <br /> small scale just do not act that way.
+          </h4>
+
+          {/* Flex container for buttons with hover and active effects */}
+          <div className="flex justify-center gap-4 mb-8">
+            <button className="w-[193px] h-[52px] bg-[#23A6F0] text-white font-montserrat font-bold text-lg rounded-md transition-all duration-200 hover:bg-[#1a8bc1] active:scale-95">
+              Get Quote Now
+            </button>
+            <button className="w-[162px] h-[52px] bg-transparent border border-[#23A6F0] text-[#23A6F0] font-montserrat font-bold text-lg rounded-md transition-all duration-200 hover:bg-[#23A6F0] hover:text-white active:scale-95">
+              Learn More
+            </button>
+          </div>
+
+          {/* Flex container for boxes with hover and active effects */}
+          <div className="flex gap-8 pt-20">
+            {/* Box 1 */}
+            <div className="w-[328px] h-[292px] p-[35px] bg-white shadow-lg rounded-md flex flex-col items-start transition-all duration-200 hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer">
+              <div className="w-[70px] h-[76px] bg-[#FFDCD1] rounded-[10px] mb-4"></div>
+              <h3 className="font-montserrat text-lg font-bold text-left mb-2">
+                Training Courses
+              </h3>
+              <div className="h-[2px] w-[50px] bg-[#E74040] mb-2"></div>
+              <p className="font-montserrat text-sm text-gray-600 leading-relaxed">
+                The gradual accumulation of 
+                <br />information about atomic and
+                <br /> small-scale behaviour...
+              </p>
+            </div>
+
+            {/* Box 2 */}
+            <div className="w-[328px] h-[292px] p-[35px] bg-white shadow-lg rounded-md flex flex-col items-start transition-all duration-200 hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer">
+              <div className="w-[70px] h-[76px] bg-[#B9EAA8] rounded-[10px] mb-4"></div>
+              <h3 className="font-montserrat text-lg font-bold text-left mb-2">
+                2,769 Online Courses
+              </h3>
+              <div className="h-[2px] w-[50px] bg-[#E74040] mb-2"></div>
+              <p className="font-montserrat text-sm text-gray-600 leading-relaxed">
+                The gradual accumulation of 
+                <br />information about atomic and
+                <br /> small-scale behaviour...
+              </p>
+            </div>
+
+            {/* Box 3 */}
+            <div className="w-[328px] h-[292px] p-[35px] bg-[#23A6F0] shadow-lg rounded-md flex flex-col items-start transition-all duration-200 hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer">
+              <div className="w-[70px] h-[76px] bg-[#FFFFFF] rounded-[10px] mb-4"></div>
+              <h3 className="font-montserrat text-lg font-bold text-left mb-2 text-white">
+                Consulting Services
+              </h3>
+              <div className="h-[2px] w-[50px] bg-[#FFFFFF] mb-2"></div>
+              <p className="font-montserrat text-sm text-gray-100 leading-relaxed">
+                The gradual accumulation of 
+                <br />information about atomic and
+                <br /> small-scale behaviour...
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
